@@ -1,0 +1,47 @@
+# 1. Créer un dossier learn_git
+mkdir learn_git
+
+# 2. Aller dans ce dossier
+cd learn_git
+
+# 3. Créer un fichier third.txt
+touch third.txt
+
+# 4. Initialiser un dépôt git vide
+git init
+
+# 5. Ajouter third.txt à la staging area
+git add third.txt
+
+# 6. Committer avec le message "adding third.txt"
+git commit -m "adding third.txt"
+
+# 7. Vérifier le commit avec git log
+git log
+
+# 8. Créer un autre fichier appelé fourth.txt
+touch fourth.txt
+
+# 9. Ajouter fourth.txt à la staging area
+git add fourth.txt
+
+# 10. Committer avec le message "adding fourth.txt"
+git commit -m "adding fourth.txt"
+
+# 11. Enlever le fichier third.txt
+rm third.txt
+
+# 12. Ajouter cette modification à la staging area (en utilisant git add .)
+git add .
+
+# 13. Committer avec le message "removing third.txt"
+git commit -m "removing third.txt"
+
+# 14. Vérifier vos commits en utilisant git log
+git log
+
+# 15. Changer les paramètres globaux pour core.pager=cat
+git config --global core.pager cat
+
+# 16. Lister toutes les configurations globales git
+git config --global --list
