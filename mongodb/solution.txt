@@ -1,0 +1,43 @@
+1. 
+use contact
+
+2. 
+db.contactlist.insertMany([
+  { nom: "Ben", prenom: "Moris", email: "ben@gmail.com", age: 26 },
+  { nom: "Kefi", prenom: "Seif", email: "kefi@gmail.com", age: 15 },
+  { nom: "Emilie", prenom: "brouge", email: "emilie.b@gmail.com", age: 40 },
+  { nom: "Alex", prenom: "brown", age: 4 },
+  { nom: "Denzel", prenom: "Washington", age: 3 }
+])
+
+3. 
+db.contactlist.find().pretty()
+
+
+4. 
+db.contactlist.findOne({ _id: ObjectId("ID_PAR_EXEMPLE") })
+
+
+5. 
+db.contactlist.find({ age: { $gt: 18 } }).pretty()
+
+6.
+db.contactlist.find({
+  age: { $gt: 18 },
+  nom: { $regex: "ah", $options: "i" }
+}).pretty()
+
+
+7.
+db.contactlist.updateOne(
+  { nom: "Kefi", prenom: "Seif" },
+  { $set: { prenom: "Anis" } }
+)
+
+
+8.
+db.contactlist.deleteMany({ age: { $lt: 5 } })
+
+
+9.
+db.contactlist.find()
